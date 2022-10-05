@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego pelota</title>
+    <script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+    <canvas id="MiCanvas" width="1200" height="600" style="border: 2px solid #000000; background-color: #61c200">
+        Tu navegador no soporta canvas
+    </canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("MiCanvas");
+        var ctx = canvas.getContext('2d');
+        var x = canvas.width/2;
+        var y = canvas.height/2;
+        var dx =2;
+        var dy =-5;
+        var palah = 15;
+        var palaw = 85;
+        var palax = (canvas.width - palaw)/2;
+        var derpulsa = false;
+        var izqpulsa = false;
+        document.addEventListener('keydown', keyDownHandler, false);
+        document.addEventListener('keyup', keyUpHandler, false);
+        setInterval(dibujabalon ,10);
+
+    </script>
+
+</body>
+</html>
